@@ -1,0 +1,48 @@
+:root {
+  --blue: #256e85;
+  --blue-light: #A9CED8;
+  --green: #27853e;
+  --green-light: #B5D8BD;
+  --ocre: #a8922e;
+  --ocre-light: #DCD976;
+  --red: #c94632;
+  --red-light: #ECB291;
+  --venster-green-dark: #1f2917;
+  --venster-green: #343d2d;
+  --venster-green-light: #434f3c;
+  --white: #fff;
+  --venster-white: #f9f9f7;
+  --venster-white-dark: #f4f4f1;
+  --venster-grey-light: #ebebe7;
+  --venster-grey: #bdc3bb;
+  --venster-grey-dark: #9ba398;
+
+  --base-dark: var(--venster-green);
+  --base-light: var(--venster-white);
+  --text-dark: var(--venster-green);
+  --text-light: var(--venster-grey-light);
+  --contrast-light: var(--white);
+  --contrast-dark: var(--venster-green-dark);
+  --dimmed-light: var(--venster-white-dark);
+  --dimmed-dark: var(--venster-green-light);
+  --secondary-light: var(--venster-grey-dark);
+  --secondary-dark: var(--venster-grey);
+  --shadow-light: rgba(0, 0, 0, 0.1);
+  --shadow-dark: rgba(0, 0, 0, 0.5);
+
+  --color-text: var(--text-dark);
+  --color-back: var(--base-light);
+  --color-shadow: var(--shadow-light);
+  --dimmed: var(--dimmed-light);
+  --contrast: var(--contrast-light);
+  --secondary: var(--secondary-light);
+}
+
+.dark {
+  --color-text: var(--base-light);
+  --color-back: var(--base-dark);
+  --color-shadow: var(--shadow-dark);
+  --dimmed: var(--dimmed-dark);
+  --contrast: var(--contrast-dark);
+  --secondary: var(--secondary-dark);
+}

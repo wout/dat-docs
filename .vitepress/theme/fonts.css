@@ -1,0 +1,8 @@
+@import url(https://static-cdn.venster.io/fonts/untitled.css);
+@import url(https://static-cdn.venster.io/fonts/pitch.css);
+
+:root {
+  --font-sans: 'untitled-sans';
+  --font-mono: 'pitch-sans';
+  --font-serif: 'untitled-serif';
+}

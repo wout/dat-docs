@@ -1,0 +1,117 @@
+:root {
+  --vp-font-family-base: var(--font-sans);
+  --vp-font-family-mono: var(--font-mono);
+  --vp-code-font-size: 1em;
+
+
+  /* Text */
+  --vp-c-text-1: var(--color-text);
+  --vp-c-text-2: var(--color-text);
+
+  /* Background */
+  --vp-c-bg: var(--color-back);
+  --vp-c-bg-soft: var(--contrast);
+  --vp-c-bg-soft-down: var(--color-back);
+  --vp-sidebar-bg-color: var(--dimmed);
+
+  /* Brand */
+  --vp-c-brand: var(--ocre);
+  --vp-c-brand-light: var(--blue-light);
+
+  /* Button */
+  --vp-button-brand-bg: var(--ocre);
+  --vp-button-brand-border: var(--ocre);
+  --vp-button-brand-text: var(--contrast);
+  --vp-button-brand-hover-bg: var(--color-text);
+  --vp-button-brand-hover-border: var(--color-text);
+  --vp-button-brand-active-bg: var(--ocre);
+  --vp-button-brand-active-border: var(--ocre);
+  --vp-button-alt-border: var(--venster-grey);
+  --vp-button-alt-bg: var(--venster-grey);
+  --vp-button-alt-text: var(--contrast);
+  --vp-button-alt-hover-border: var(--venster-grey-dark);
+  --vp-button-alt-hover-bg: var(--venster-grey-dark);
+  --vp-button-alt-hover-text: var(--contrast);
+  --vp-button-alt-active-border: var(--contrast);
+  --vp-button-alt-active-bg: var(--contrast);
+
+  /* Custom containers */
+  --vp-custom-block-info-bg: var(--dimmed);
+  --vp-custom-block-info-text: var(--venster-green-light);
+  --vp-custom-block-tip-bg: var(--dimmed);
+  --vp-custom-block-tip-text: var(--green);
+  --vp-custom-block-warning-bg: var(--dimmed);
+  --vp-custom-block-warning-text: var(--ocre);
+  --vp-custom-block-details-bg: var(--dimmed);
+  --vp-custom-block-details-text: var(--venster-green-light);
+  --vp-custom-block-danger-bg: var(--dimmed);
+
+  /* Code */
+  --vp-code-block-bg: var(--text-dark);
+  --vp-c-mute: var(--dimmed);
+  --vp-c-text-code: var(--green);
+  --vp-code-copy-code-bg: var(--base-dark);
+  --vp-code-copy-code-hover-bg: var(--dimmed-dark);
+  --vp-custom-block-info-code-bg: var(--contrast);
+  --vp-custom-block-tip-code-bg: var(--contrast);
+  --vp-custom-block-warning-code-bg: var(--contrast);
+  --vp-custom-block-danger-code-bg: var(--contrast);
+  --vp-custom-block-details-code-bg: var(--contrast);
+  --vp-code-line-highlight-color: var(--venster-green-dark);
+}
+
+html {
+  font-weight: 500;
+  font-size: 1.1em;
+}
+
+.custom-block {
+  border: none;
+}
+
+code,
+.vp-doc div[class*='language-'] {
+  font-weight: 500;
+}
+
+.dark {
+  /* Brand */
+  --vp-c-brand: var(--ocre-light);
+
+    /* Button */
+  --vp-button-brand-bg: var(--ocre-light);
+  --vp-button-brand-border: var(--ocre-light);
+  --vp-button-brand-hover-text: var(--venster-green);
+  --vp-button-alt-border: var(--venster-grey-dark);
+  --vp-button-alt-bg: var(--venster-grey-dark);
+  --vp-button-alt-hover-border: var(--venster-grey);
+  --vp-button-alt-hover-bg: var(--venster-grey);
+
+  /* Custom containers */
+  --vp-custom-block-info-bg: var(--contrast);
+  --vp-custom-block-info-text: var(--venster-grey-light);
+  --vp-custom-block-tip-bg: var(--contrast);
+  --vp-custom-block-tip-text: var(--green-light);
+  --vp-custom-block-warning-bg: var(--contrast);
+  --vp-custom-block-warning-border: var(--ocre);
+  --vp-custom-block-warning-text: var(--ocre-light);
+  --vp-custom-block-details-text: var(--venster-grey-light);
+  --vp-custom-block-danger-bg: var(--contrast);
+
+  /* Code */
+  --vp-code-block-bg: var(--contrast-dark);
+  --vp-c-text-code: var(--green-light);
+  --vp-code-line-highlight-color: rgba(0, 0, 0, 0.4);
+}
+
+.vp-doc a {
+  text-decoration: underline;
+  text-decoration-style: line;
+  text-decoration-color: var(--vp-c-divider);
+  transition-property: text-decoration-color;
+  transition-duration: 0.1s;
+}
+
+.vp-doc strong {
+  font-weight: 500;
+}
