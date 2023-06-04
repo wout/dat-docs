@@ -7,11 +7,11 @@ hero:
   tagline: Get up-to speed with venster and learn how to implement DATs
   actions:
     - theme: brand
+      text: Getting started with DATs
+      link: /using-dats
+    - theme: alt
       text: DAT Metadata Standard
       link: /dat-metadata-standard
-    # - theme: alt
-    #   text: API Examples
-    #   link: /api-examples
 
 features:
   - title: Distributed Artifact Tokens

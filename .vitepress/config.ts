@@ -22,7 +22,7 @@ export default defineConfig({
         text: 'Using DATs',
         collapsed: true,
         items: [
-          { text: 'Introduction', link: '/using-dats' }
+          { text: 'Getting started', link: '/using-dats' }
         ]
       },
       {
@@ -31,7 +31,8 @@ export default defineConfig({
         items: [
           { text: 'Introduction', link: '/dat-metadata-standard' },
           { text: 'Specification', link: '/dat-metadata-standard/specification' },
-          { text: 'Implementation', link: '/dat-metadata-standard/implementation' }
+          { text: 'Implementation', link: '/dat-metadata-standard/implementation' },
+          { text: 'Examples', link: '/dat-metadata-standard/examples' }
         ]
       }
     ],
