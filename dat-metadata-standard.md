@@ -30,7 +30,11 @@ Some existing on-chain projects on Cardano make inefficient use of block space b
 
 Without imposing more restrictions on creators, how do we drastically reduce the on-chain storage footprint of generative token collections?
 
-### **3**. Dependencies and archival qualities
+### **3**. Diversity of tools
+
+While JavaScript has become a dominant language in on-chain art, it's only a fraction of what other languages an tools are available for creators.
+
+### **4**. Dependencies and archival qualities
 
 Storing all dependencies for a generative token on the blockchain is not always convenient, sensible or even viable. Examples are p5.js, three.js, Processing or Blender, to name a few. There is currently no way to describe token dependencies so that digital artefacts can be rendered or reproduced by third parties.
 
