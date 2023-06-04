@@ -2,13 +2,15 @@
 
 The DAT Metadata Standard builds on the existing [CIP-0025](https://github.com/cardano-foundation/CIPs/tree/master/CIP-0025) standard and is divided into three separate entities.
 
-### **1**. Scene
+## **1**. Scene
 
 The *scene* token is the part the end user will receive in their wallet. It contains all the information to render the DAT.
 
-#### **1.a.** Metadata
+### **1.a.** Metadata
 
 The scene token requires a `renderer` property to be present, referencing the token containing the code of the renderer.
+
+Although not mandatory, it's advisable to bundle token-specific properties into the `properties` object to avoid pollution of the token's root namespace. It will help token viewers to locate and render those properties. 
 
 ```json{19-22,24-26}
 {
@@ -52,10 +54,10 @@ Properties for the *scene* token:
 - **`properties`** (_optional_): an object with arbitrary key/value pairs describing the token's (unique) properties
 
 ::: details
-If a DAT uses data from the blockchain to drive its generative algorithm, it's impossible to create a representational thumbnail image before the mint. So the preview image for wallets and marketplaces should be treated more as an album cover than a visual representation of the actual artefact.
+If a DAT uses data from the blockchain to drive its generative algorithm, it's impossible to create a representational preview image before the mint. So, in that case, the preview image for wallets and marketplaces should be treated more as an album cover than a visual representation of the actual artefact.
 :::
 
-#### **1.b.** Argument directives
+### **1.b.** Argument directives
 
 Several directives for dynamic arguments can be passed to the renderer. Before rendering a DAT, viewers must resolve any directives by querying the required data form the blockchain and pass the actual values to the renderer.
 
@@ -113,13 +115,13 @@ Referencing another token's arguments does not work recursively.
 The list of directives mentioned above is not exhaustive, nor final. Proposals for new directives will be considered and added over time.
 :::
 
-### **2**. Renderer
+## **2**. Renderer
 
 The *renderer* token is always part of the same `policy_id`. It can either be a self-contained program or one with dependencies. Within the same policy, multiple *renderer* tokens can exist, but *scene* tokens can only reference one at a time.
 
-#### **2.a.** Metadata
+### **2.a.** Metadata
 
-The renderer's code is stored in the `files` property as-is or as a base64-encoded string. The `name` property of the file should match the `asset_name` with the appropriate file extenstion, so viewers can filter out the renderer-related files.
+The renderer's code is stored in the `files` property as-is or as a base64-encoded string. The `name` property of the file must match the `asset_name` with the appropriate file extenstion, so viewers can filter out the renderer-related files.
 
 Instructions and/or requirements to reproduce the token can be stored in a file named `instructions`. For browser-based artworks, this should include the latest browser version(s) in which the token works. For projects executed locally, it should be a dependency file for a package manager (see attachment `examples/renderer/instructions.md`).
 
@@ -160,9 +162,9 @@ While not mandatory, it's advisable to add a **`license`** property to every fil
 The renderer token should be burned after minting to free up the UTxO.
 :::
 
-#### **2.b.** Policy dependencies
+### **2.b.** On-chain dependencies
 
-These are project-specific on-chain dependencies managed by the creator. They must be minted within the same `policy_id`.
+These are policy-specific on-chain dependencies managed by the creator. They must be minted within the same `policy_id` and are referenced by their `asset_name`.
 
 ```json
 {
@@ -171,9 +173,9 @@ These are project-specific on-chain dependencies managed by the creator. They mu
 }
 ```
 
-#### **2.c.** Viewer dependencies:
+### **2.c.** Internal dependencies:
 
-These are on-chain dependencies managed by the viewer and made available to the *renderer* on execution. They can be referenced by using the dependency's asset `fingerprint`:
+These are on-chain dependencies managed internally by the viewer and made available to the *renderer* at runtime. They can be referenced by using the dependency's asset `fingerprint`:
 
 ```json
 {
@@ -192,11 +194,13 @@ Or the asset's `policy_id` and `asset_name`:
 }
 ```
 
-The former being more concise and the latter more readable.
+::: tip
+Using the `fingerprint` is more concise, but it doesn't tell anything about the referenced asset. Although being more verbose, the second option is more readable as it includes the human-readable `asset_name`. It does not matter which option is used, they both return the same token.
+:::
 
-#### **2.d.** External dependencies:
+### **2.d.** External dependencies:
 
-These are off-chain dependencies managed by the viewer and made available to the *renderer* on execution.
+These are off-chain dependencies managed by the viewer and made available to the *renderer* at runtime.
 
 ```json
 {
@@ -207,10 +211,10 @@ These are off-chain dependencies managed by the viewer and made available to the
 ```
 
 ::: info
-For examples, see attachment `examples/renderer/dependencies.md`.
+The _external_ dependency definitions are not referencing any token on the blockchain, unlike the _onchain_ and _internal_ variants. Their sole purpose is to instruct token viewers which external dependency to load at runtime. More details can be found in the [Examples](/dat-metadata-standard/examples) section.
 :::
 
-#### **2.e.** License types
+### **2.e.** License types
 
 For creators, it is recommended to choose a license that aligns with their values and with the purpose of the digital artefact. Any license can be used, but popular licenses are:
 
@@ -221,13 +225,25 @@ For creators, it is recommended to choose a license that aligns with their value
 
 Using [no license](https://choosealicense.com/no-permission/) is also an option to explicitly indicate that no one other than the creator may use the software.
 
-### **3**. Dependency
+## **3**. Dependency
 
-There are two diff of *dependency* tokens. The first is the 
+This section applies to _onchain_ and _internal_ dependencies. Aside from how they are referenced, there's no difference between them.
 
- are part of the same `policy_id`. Its code is stored in the **`files`** property as-is or as a base64-encoded string. The `name` property of the file should match the `asset_name`. Similar to the *renderer*, every file can have an individual `license` property.
+::: details
+What sets them apart is the scope in which they are available and by whom they are managed:
+- _onchain_: managed by creators, must be minted under the same `policy_id` as the _renderer_ token referencing them and only available within that same policy
+- _internal_: managed by token viewers and globally available to anyone using the DAT Metadata Standard
+:::
 
-Dependencies can consist of multiple parts if they don't fit into one 16kB transaction. The dependency referenced from the renderer serves as an entrypoint referencing the additional parts, and should contains the first part as well. Viewers can decide how many parts to allow or support.
+Dependency tokens can consist of multiple parts if they don't fit into one 16kB transaction. The dependency referenced from the _renderer_ serves as an entrypoint, in turn referencing the additional parts.
+
+::: warning
+The number of accepted dependency parts is limited. Token viewers decide how many parts to allow or support. Ten parts should be more than sufficient in most scenarios. 
+:::
+
+### **3.a.** Metadata
+
+The code is stored in the **`files`** property as-is or as a base64-encoded string. The `name` property of the file must match the `asset_name`. Similar to the *renderer*, every file can have an individual `license` property.
 
 ```json{9,13-15}
 {
@@ -254,7 +270,9 @@ Dependencies can consist of multiple parts if they don't fit into one 16kB trans
 Properties for the *dependency* token:
 - **`parts`** (_optional_): an array with asset names (e.g. `asset_name_part_2`)
 
+::: info
 While not mandatory, it's advisable to add a **`license`** property to each file in the `files` section. More info on licenses in section 2.e.
+:::
 
 ::: tip
 Dependency tokens should be burned after minting to free up the UTxOs.
