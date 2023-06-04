@@ -18,19 +18,19 @@ DATs introduce a way to instruct token viewers to query information from the blo
 
 The motive for creating this standard is best described through the three following problems.
 
-### 1. Storage limit
+### **1**. Storage limit
 
 Cardano is very well suited for on-chain generative tokens. Compared to other blockchains, it has the lowest L1 storage cost per kB, but the maximum transaction size of 16 kB is more limited compared to other chains.
 
 How can we create generative tokens with larger on-chain codebases without hurting the blockchain?
 
-### 2. Inefficient use of block space
+### **2**. Inefficient use of block space
 
 Some existing on-chain projects on Cardano make inefficient use of block space by repeatedly storing the same monolithic blob, accompanied by a few unique parameters. The result is thousands of copies of the same code, close to or at the total capacity of the 16 kB transaction limit.
 
 Without imposing more restrictions on creators, how do we drastically reduce the on-chain storage footprint of generative token collections?
 
-### 3. Dependencies and archival qualities
+### **3**. Dependencies and archival qualities
 
 Storing all dependencies for a generative token on the blockchain is not always convenient, sensible or even viable. Examples are p5.js, three.js, Processing or Blender, to name a few. There is currently no way to describe token dependencies so that digital artefacts can be rendered or reproduced by third parties.
 

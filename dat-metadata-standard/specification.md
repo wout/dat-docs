@@ -250,12 +250,12 @@ Using [no license](https://choosealicense.com/no-permission/) is also an option 
 This section applies to _onchain_ and _internal_ dependencies. Aside from how they are referenced, there is no difference between them.
 
 ::: details
-What sets them apart is the scope in which they are available and by whom they are managed:
-- _onchain_: managed by creators, must be minted under the same `policy_id` as the _renderer_ token referencing them and only available within that same policy
+What sets them apart is the scope in which they are available and by whom they are managed.
+- _onchain_: managed by creators, must be minted under the same `policy_id` as the _renderer_ token referencing them and only available within that policy
 - _internal_: managed by token viewers and globally available to anyone using the DAT Metadata Standard
 :::
 
-Dependency tokens can have multiple parts if they don not fit into one 16kB transaction. The dependency referenced from the _renderer_ serves as an entry point, referencing the additional parts.
+Dependency tokens can have multiple parts if they do not fit into one 16kB transaction. The dependency referenced from the _renderer_ serves as an entry point, referencing the additional parts.
 
 ::: warning
 The number of accepted dependency parts is limited. Token viewers decide how many parts to allow or support. Ten parts should be more than sufficient in most scenarios. 
