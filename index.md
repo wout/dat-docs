@@ -4,7 +4,7 @@ layout: home
 
 hero:
   name: "Venster Documentation"
-  tagline: Get up-to speed with venster and learn how to implement DATs
+  tagline: Get up-to speed with venster and learn how to work with DATs
   actions:
     - theme: brand
       text: Getting started with DATs

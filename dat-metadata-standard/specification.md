@@ -1,6 +1,6 @@
 # Specification
 
-A single DAT is distributed over at least two tokens, represented by different token types: _scene_, _renderer_ and optionally, _dependency_.
+A single DAT is distributed over at least two tokens, represented by three different token types: _scene_, _renderer_ and optionally, _dependency_.
 
 Typically, _scene_ tokens don't hold any code. They carry a reference to the _renderer_ token, arguments for invocation of the renderer and token-specific properties. _Scene_ tokens are therefore relatively small (less than 2kB). All _scene_ tokens in a collection reference one, or at most a few, _renderer_ tokens.
 
@@ -16,9 +16,9 @@ The _scene_ token is the part the end user will receive in their wallet. It cont
 
 ### **1.a.** Metadata
 
-The scene token requires a `renderer` property to be present, referencing the token containing the code of the renderer.
+_Scene_ tokens require a `renderer` property to be present, referencing the token containing the code of the renderer.
 
-Although not mandatory, it's advisable to bundle token-specific properties in the `properties` object to avoid pollution of the token's root namespace. It will help token viewers to locate and render those properties. 
+Although not mandatory, it's advisable to bundle token-specific properties in the `properties` object to avoid pollution of the token's root namespace. It will help token viewers to locate and render those details. 
 
 ```json{19-22,24-26}
 {
