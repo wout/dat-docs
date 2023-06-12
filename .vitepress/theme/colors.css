@@ -13,9 +13,9 @@
   --venster-grey-light: #ebebe7;
   --venster-grey: #bdc3bb;
   --venster-grey-dark: #9ba398;
-  --venster-green-light: #434f3c;
-  --venster-green: #343d2d;
-  --venster-green-dark: #1f2917;
+  --venster-green-light: #454e40;
+  --venster-green: #363c31;
+  --venster-green-dark: #21281c;
 
   --base-dark: var(--venster-green);
   --base-light: var(--venster-white);
