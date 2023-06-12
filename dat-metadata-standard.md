@@ -10,7 +10,7 @@ The DAT Metadata Standard is published under the [CC-BY-4.0](https://creativecom
 
 This standard is intended for on-chain generative tokens but may also be suitable for other use cases. It describes a method to store code on the blockchain in a space-efficient way using Cardano's Native Tokens.
 
-Generative tokens created following this standard are called **Distributed Artefact Tokens**, or **DAT**s. They are not necessarily a replacement for NFTs but rather a separate class of tokens in their own right. They can be fungible, semi-fungible or non-fungible. 
+Generative tokens created following this standard are called **Distributed Artefact Tokens**, or **DAT**s. They are not necessarily a replacement for NFTs but rather a layer on top of Native Tokens. They can be fungible, semi-fungible or non-fungible. 
 
 DATs introduce a way to instruct token viewers to query information from the blockchain. Queries may include information about the current state of the blockchain, details from the token's mint transaction or details from previously minted tokens. The queried data can be used to create dynamic tokens, evolving tokens, interlinked token collections, etc.
 

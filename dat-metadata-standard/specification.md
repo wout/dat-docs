@@ -1,6 +1,6 @@
 # Specification
 
-A single DAT is distributed over at least two tokens, represented by three different token types: _scene_, _renderer_ and optionally, _dependency_.
+A single DAT is distributed over at least two tokens, represented by three possible token types: _scene_, _renderer_ and optionally, _dependency_.
 
 Typically, _scene_ tokens don't hold any code. They carry a reference to the _renderer_ token, arguments for invocation of the renderer and token-specific properties. _Scene_ tokens are therefore relatively small (less than 2kB). All _scene_ tokens in a collection reference one, or at most a few, _renderer_ tokens.
 
@@ -70,37 +70,38 @@ If a DAT uses data from the blockchain to drive its generative algorithm, it's i
 Several directives for dynamic arguments can be passed to the renderer. Before rendering a DAT, viewers must resolve any directives by querying the requested data from the blockchain and pass the actual values to the renderer.
 
 _Current token_
-- `@tx_hash` (`string`): transaction hash of the mint (can for example be used as the seed value for a Sfc32 PRNG)
-- `@epoch` (`number`): epoch in which the token was minted
-- `@slot` (`number`): slot in which the token was minted
-- `@block` (`number`): block in which the token was minted
-- `@block_size` (`number`): size of the token's block
-- `@block_hash` (`string`): hash of the token's block
+- **`@tx_hash`** (`string`): transaction hash of the mint (can for example be used as the seed value for a Sfc32 PRNG)
+- **`@epoch`** (`number`): epoch in which the token was minted
+- **`@slot`** (`number`): slot in which the token was minted
+- **`@block`** (`number`): block in which the token was minted
+- **`@block_size`** (`number`): size of the token's block
+- **`@block_hash`** (`string`): hash of the token's block
+- **`@owner_addresses`** (`string[]`): an array of owner addresses
 
 _Previously minted token_
-- `@tx_hash.previous` (`string | null`): transaction hash
-- `@epoch.previous` (`number | null`): epoch in which the token was minted
-- `@slot.previous` (`number | null`): slot in which the token was minted
-- `@block.previous` (`number | null`): block in which the token was minted
-- `@block_size.previous` (`number | null`): size of the token's block
-- `@block_hash.previous` (`string | null`): hash of the token's block
-- `@arguments.previous` (`array | null`): token's renderer arguments
+- **`@tx_hash.previous`** (`string | null`): transaction hash
+- **`@epoch.previous`** (`number | null`): epoch in which the token was minted
+- **`@slot.previous`** (`number | null`): slot in which the token was minted
+- **`@block.previous`** (`number | null`): block in which the token was minted
+- **`@block_size.previous`** (`number | null`): size of the token's block
+- **`@block_hash.previous`** (`string | null`): hash of the token's block
+- **`@arguments.previous`** (`array | null`): token's renderer arguments
 
 _Specific token (within the same policy_id)_
-- `@tx_hash.asset_name` (`string | null`): transaction hash
-- `@epoch.asset_name` (`number | null`): epoch in which the token was minted
-- `@slot.asset_name` (`number | null`): slot in which the token was minted
-- `@block.asset_name` (`number | null`): block in which the token was minted
-- `@block_size.asset_name` (`number | null`): size of the token's block
-- `@block_hash.asset_name` (`string | null`): hash of the token's block
-- `@arguments.asset_name` (`array | null`): token's renderer arguments
+- **`@tx_hash.asset_name`** (`string | null`): transaction hash
+- **`@epoch.asset_name`** (`number | null`): epoch in which the token was minted
+- **`@slot.asset_name`** (`number | null`): slot in which the token was minted
+- **`@block.asset_name`** (`number | null`): block in which the token was minted
+- **`@block_size.asset_name`** (`number | null`): size of the token's block
+- **`@block_hash.asset_name`** (`string | null`): hash of the token's block
+- **`@arguments.asset_name`** (`array | null`): token's renderer arguments
 
 _Current blockchain state_
-- `@current_epoch` (`number`): current (latest) epoch
-- `@current_slot` (`number`): current (latest) slot
-- `@current_block` (`number`): current (latest) minted block
-- `@current_block_size` (`number`): size of the current block
-- `@current_block_hash` (`string`): hash of the current block
+- **`@current_epoch`** (`number`): current (latest) epoch
+- **`@current_slot`** (`number`): current (latest) slot
+- **`@current_block`** (`number`): current (latest) minted block
+- **`@current_block_size`** (`number`): size of the current block
+- **`@current_block_hash`** (`string`): hash of the current block
 
 Passing argument directives to the renderer works just like static arguments. For example:
 
@@ -120,7 +121,7 @@ Referencing another token's arguments does not work recursively.
 :::
 
 ::: info
-The list of directives mentioned above is not exhaustive, nor final. Proposals for new directives will be considered and added over time.
+The list of directives mentioned above is not final. Proposals for new directives will be considered and added over time.
 :::
 
 ## **2**. Renderer

@@ -74,6 +74,10 @@ code,
   font-weight: 500;
 }
 
+strong code {
+  font-weight: 700;
+}
+
 .dark {
   /* Brand */
   --vp-c-brand: var(--ocre-light);

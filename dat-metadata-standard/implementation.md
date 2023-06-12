@@ -17,7 +17,7 @@ By looking at three real-world cases, it becomes clear that by using DATs, rough
 
 The first two examples used monolithic NFTs while the the third one used DATs.
 
-#### **2.a.** Example 1
+#### Example 1
 
 This collection contains 17190 tokens as monolithic HTML NFTs.
 
@@ -32,7 +32,7 @@ This collection would have used **~ 90.1 %** less block space with DATs
 Policy id: `e8209a96a456202276f66224241a703676122d606d208fe464f2e09f`
 :::
 
-#### **2.b.** Example 2
+#### Example 2
 
 This collection contains 1744 tokens as monolithic HTML NFTs.
 
@@ -47,7 +47,7 @@ This collection would have used **~ 89.6 %** less block space with DATs.
 Policy id: `95c248e17f0fc35be4d2a7d186a84cdcda5b99d7ad2799ebe98a9865`
 :::
 
-#### **2.c.** Example 3
+#### Example 3
 
 This is a collection of 3409 tokens and the first one ever minted using the DAT Metadata Standard.
 
@@ -62,7 +62,9 @@ By using DATs, **~ 94.3 %** of block space was saved. It is also important to no
 Policy id: `5120000fd4f7584a4ff2b2f5fe71f735f84315106dd6014ac581baa5`
 :::
 
-### **Solution 3:** Dependencies and archival qualities
+### **Problem 3:** Diversity of tools
+
+### **Solution 4:** Dependencies and archival qualities
 
 
 ## Path to Active
