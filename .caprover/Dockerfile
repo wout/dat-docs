@@ -20,8 +20,7 @@ FROM nginx:stable-alpine as webserver
 RUN rm -rf /etc/nginx/conf.d
 RUN mkdir -p /etc/nginx/conf.d
 COPY ./.caprover/default.conf /etc/nginx/conf.d/
-# COPY --from=vite_build /build/.vitepress/dist /usr/share/nginx/html
-RUN echo "hellø" >> /usr/share/nginx/html/index.html
+COPY --from=vite_build /build/.vitepress/dist/* /usr/share/nginx/html
 
 # release app
 EXPOSE 80
