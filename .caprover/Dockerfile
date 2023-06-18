@@ -6,12 +6,9 @@ ARG NODE_VERSION=18
 FROM node:$NODE_VERSION-alpine as vite_build
 WORKDIR /build
 COPY . .
-RUN npm install -g npm@latest
-RUN npm install -g typescript
-RUN npm install -g vite
+RUN npm install -g npm@latest typescript vite
 RUN npm install
 RUN npm run docs:build
-
 
 # ##############################
 # Build webserver
