@@ -53,6 +53,7 @@ export default defineConfig({
     ['meta', { name: 'apple-mobile-web-app-title', content: 'venster' }],
     ['meta', { name: 'application-name', content: 'venster' }],
     ['meta', { name: 'msapplication-TileColor', content: '#ffffff' }],
-    ['meta', { name: 'theme-color', content: '#ffffff' }]
+    ['meta', { name: 'theme-color', content: '#ffffff' }],
+    ['script', { defer: '', 'data-api': '/api/event', 'data-domain': 'docs.venster.art', src: '/js/script.js' }]
   ]
 })
