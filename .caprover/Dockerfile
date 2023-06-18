@@ -25,11 +25,3 @@ COPY --from=vite_build /build/.vitepress/dist /usr/share/nginx/html
 # release app
 EXPOSE 80
 CMD ["nginx", "-g", "daemon off;"]
-
-
-# ##############################
-# Health check for zero-downtime deploys
-# ##############################
-# HEALTHCHECK \
-#   --interval=20s --retries=5 \
-#   CMD curl --fail localhost || exit 1
