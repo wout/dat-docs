@@ -17,7 +17,6 @@ FROM nginx:stable-alpine as webserver
 
 # prepare proxy cache setup
 RUN mkdir -p /var/run/nginx-cache
-RUN echo "D /var/run/nginx-cache 0755 root root -" > /run/tmpfiles.d/nginx-cache.conf
 
 # copy config
 RUN rm -rf /etc/nginx/conf.d
