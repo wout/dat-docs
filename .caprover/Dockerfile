@@ -18,12 +18,12 @@ FROM nginx:stable-alpine as webserver
 # prepare proxy cache setup
 RUN mkdir -p /var/run/nginx-cache
 
-# copy config
+# copy vhost config
 RUN rm -rf /etc/nginx/conf.d
 RUN mkdir -p /etc/nginx/conf.d
 COPY ./.caprover/default.conf /etc/nginx/conf.d/
 
-# coby build
+# copy vite build
 COPY --from=vite_build /build/.vitepress/dist /usr/share/nginx/html
 
 # release app
