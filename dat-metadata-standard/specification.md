@@ -1,8 +1,11 @@
+---
+outline: [2, 3]
+---
 # Specification
 
 A single DAT is distributed over at least two tokens, represented by three possible token types: _scene_, _renderer_ and optionally, _dependency_.
 
-Typically, _scene_ tokens don't hold any code. They carry a reference to the _renderer_ token, arguments for invocation of the renderer and token-specific properties. _Scene_ tokens are therefore relatively small (less than 2kB). All _scene_ tokens in a collection reference one, or at most a few, _renderer_ tokens.
+Typically, _scene_ tokens don't hold any code. They carry a reference to the _renderer_ token, arguments for invocation of the renderer and token-specific properties. _Scene_ tokens are therefore relatively small (less than 3kB). All _scene_ tokens in a collection reference one, or at most a few, _renderer_ tokens.
 
 The code to render all _scene_ tokens is stored in a _renderer_ token, which in turn can reference _dependency_ tokens containing shared libraries or assets. _Dependency_ tokens are considered extensions to the _renderer_ and can not be referenced directly by _scene_ tokens.
 
