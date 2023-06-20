@@ -3,11 +3,11 @@ next: false
 ---
 # DAT examples
 
-Last February, we released the first two collections using the DAT Metadata Standard. There's also an example token showcasing the use of [p5.js](https://p5js.org/). It's not much, but after the launch of our generative art platform in the Autumn of 2023, many more examples will be available.
+In December 2022, the initial version of the DAT Metadata Standard was released, and it has recently been transformed into a CIP (Cardano Improvement Proposal). Although there are few examples currently available, this is set to change soon. Once venster's generative art platform is launched in Autumn 2023, many additional examples will become available.
 
 ## The Perfect NFT
 
-[The Perfect NFT](https://theperfectnft.art/) was the first use of the DAT Metadata Standard and consisted of two collections. It was a blockchain art performance where collectors became participants by, quite literally, leaving their fingerprints on the pieces.
+Last February, MICK+WOUT and Alexander Watanabe collaborated on [The Perfect NFT](https://theperfectnft.art/), the first use of the DAT Metadata Standard. It was a blockchain art performance where collectors became participants by, quite literally, leaving their fingerprints on the pieces.
 
 The first part of the collection was called _Temporal Bidding Declarations_, a series of receipts serving as proof of participation. In total, 3409 TBDs were minted. [View the TBDs on venster.io](https://venster.io/policies/5120000fd4f7584a4ff2b2f5fe71f735f84315106dd6014ac581baa5/assets).
 

@@ -115,8 +115,11 @@ Policy id: `5120000fd4f7584a4ff2b2f5fe71f735f84315106dd6014ac581baa5`
 
 ### **Problem 3:** Diversity of tools
 
+[TO-DO]
+
 ### **Solution 4:** Dependencies and archival qualities
 
+[TO-DO]
 
 ## Path to Active
 

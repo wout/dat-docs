@@ -7,8 +7,8 @@ hero:
   tagline: Get up-to speed with venster and learn how to work with DATs
   actions:
     - theme: brand
-      text: Getting started with DATs
-      link: /using-dats
+      text: Getting to know DATs
+      link: /dats
     - theme: alt
       text: DAT Metadata Standard
       link: /dat-metadata-standard

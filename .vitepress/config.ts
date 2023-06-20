@@ -19,11 +19,11 @@ export default defineConfig({
 
     sidebar: [
       {
-        text: 'Using DATs',
+        text: 'Introduction to DATs',
         collapsed: true,
         items: [
-          { text: 'Getting started', link: '/using-dats' },
-          { text: 'Examples', link: '/using-dats/examples' }
+          { text: 'What\'s DAT?', link: '/dats' },
+          { text: 'Examples', link: '/dats/examples' }
         ]
       },
       {
