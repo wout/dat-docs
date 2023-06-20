@@ -11,7 +11,7 @@ This section shows solutions to the four problems outlined in the [motivation](/
 
 ### **Solution 1:** Storage limit
 
-The distributed nature of DATs allows bigger on-chain codebases with dependencies. The separation of code and metadata effectively doubles the available space. Additionally, dependencies can be stored in chunks, which allows for the realistic storage of up to twenty times more data than was previously possible.
+The distributed nature of DATs allows bigger on-chain codebases with dependencies. The separation of code and metadata effectively doubles the available space. Additionally, dependencies can be stored in chunks, which allows for the realistic storage of up to fifty times more data than was previously possible.
 
 The two following existing DAT collections already showcase the solution.
 
