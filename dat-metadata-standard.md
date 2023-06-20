@@ -4,7 +4,7 @@ prev: false
 ---
 # DAT Metadata Standard
 
-This rather technical section is intended for the CIP (Cardano Improvement Proposal). If you want to get started with DATs, the [Using DATs](/using-dats) guide is better suited. But if you want to dive deeper into the why and how you're in the right place.
+This rather technical section is intended for the CIP (Cardano Improvement Proposal). If you want to learn more about DATs, the [What's DAT](/dats) section is better suited. But if you want to dive deeper into the why and how you're in the right place.
 
 ### Copyright
 
