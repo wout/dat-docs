@@ -74,8 +74,8 @@ This collection contains 17190 tokens as monolithic HTML NFTs.
 
 |                        | renderer size | token size | total kB | total MB | 
 | ---------------------- | ------------: | ---------: | -------: | -------: |
-| **as monolithic NFTs** |           N/A |    5.34 kB | 91792 kB |  ~ 90 MB |
-| **as DATs**            |       4.91 kb |    0.53 kB |  9116 kB |  ~ 8.9MB |
+| **as monolithic NFTs** |           N/A |    5.34 kB | 91792 kB |  89.6 MB |
+| **as DATs**            |       4.91 kb |    0.53 kB |  9116 kB |   8.9 MB |
 
 This collection would have used **~ 90.1 %** less block space with DATs
 
@@ -87,10 +87,10 @@ Policy id: `e8209a96a456202276f66224241a703676122d606d208fe464f2e09f`
 
 This collection contains 1744 tokens as monolithic HTML NFTs.
 
-|                        | renderer size | token size | total kB | total MB  | 
-| ---------------------- | ------------: | ---------: | -------: | --------: |
-| **as monolithic NFTs** |           N/A |    13.9 kB | 24241 kB |   ~ 24 MB |
-| **as DATs**            |      13.40 kB |    1.46 kB |  2556 kB |  ~ 2.5 MB |
+|                        | renderer size | token size | total kB | total MB | 
+| ---------------------- | ------------: | ---------: | -------: | -------: |
+| **as monolithic NFTs** |           N/A |    13.9 kB | 24241 kB |  23.7 MB |
+| **as DATs**            |      13.40 kB |    1.46 kB |  2556 kB |   2.5 MB |
 
 This collection would have used **~ 89.6 %** less block space with DATs.
 
@@ -102,12 +102,12 @@ Policy id: `95c248e17f0fc35be4d2a7d186a84cdcda5b99d7ad2799ebe98a9865`
 
 This is a collection of 3409 tokens and the first one ever minted using the DAT Metadata Standard.
 
-|                        | renderer size | token size | total kB  | total MB  | 
-| ---------------------- | ------------: | ---------: | --------: | --------: |
-| **as monolithic NFTs** |           N/A |   56.63 kB | 193052 kB |  ~ 189 MB |
-| **as DATs**            |      55.21 kB |    1.42 kB |  4,896 kB |  ~ 4.8 MB |
+|                        | renderer size | token size | total kB  | total MB | 
+| ---------------------- | ------------: | ---------: | --------: | -------: |
+| **as monolithic NFTs** |           N/A |   56.63 kB | 193052 kB | 188.5 MB |
+| **as DATs**            |      55.21 kB |    1.42 kB |   4896 kB |   4.8 MB |
 
-By using DATs, **~ 99.97 %** of block space was saved. It is also important to note that, since the token as monolithic NFT is larger than 16 kB, this collection wouldn't have been possible on Cardano.
+By using DATs, **~ 99.97 %** less block space was used. It is also important to note that, since the token as monolithic NFT is larger than 16 kB, this collection wouldn't have been possible on Cardano.
 
 ::: details
 Policy id: `5120000fd4f7584a4ff2b2f5fe71f735f84315106dd6014ac581baa5`
