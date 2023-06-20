@@ -3,7 +3,7 @@ next: false
 ---
 # DAT examples
 
-In December 2022, the initial version of the DAT Metadata Standard was released, and it has recently been transformed into a CIP (Cardano Improvement Proposal). Although there are few examples currently available, this is set to change soon. Once venster's generative art platform is launched in Autumn 2023, many additional examples will become available.
+In December 2022, the initial version of the DAT Metadata Standard was released, and it has recently been transformed into a CIP (Cardano Improvement Proposal). Although there are few examples currently available, this is set to change soon. Once Venster's generative art platform is launched in Autumn 2023, many additional examples will become available.
 
 ## The Perfect NFT
 

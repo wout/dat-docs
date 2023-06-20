@@ -3,7 +3,7 @@ import { defineConfig } from 'vitepress'
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   title: "Venster Documentation",
-  description: "Get up-to speed with venster and learn how to create DATs",
+  description: "Get up-to speed with Venster and learn how to create DATs",
   themeConfig: {
     logo: {
       light: 'venster-named-light-07-optim.svg',

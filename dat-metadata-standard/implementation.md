@@ -125,9 +125,11 @@ Policy id: `5120000fd4f7584a4ff2b2f5fe71f735f84315106dd6014ac581baa5`
 
 ### Acceptance Criteria
 <!-- Describes what are the acceptance criteria whereby a proposal becomes 'Active' -->
+[TO-DO]
 
 ### Implementation Plan
 
+[TO-DO]
 - one implementation alreaday live (venster)
 - desktop viewer available later 2023 (open-source) 
 - working with existing viewers to implement the DMS

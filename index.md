@@ -4,7 +4,7 @@ layout: home
 
 hero:
   name: "Venster Documentation"
-  tagline: Get up-to speed with venster and learn how to work with DATs
+  tagline: Get up-to speed with Venster and learn how to work with DATs
   actions:
     - theme: brand
       text: Getting to know DATs
@@ -17,7 +17,7 @@ features:
   - title: Distributed Artifact Tokens
     details: Get to know the intimate details of DATs and how to use them in your work.
   - title: Minting on Venster (soon)
-    details: Find everything you need to know about launching a collection on venster.
+    details: Find everything you need to know about launching a collection on Venster.
   - title: The Venster Viewer (soon)
     details: Learn how you can use the desktop viewer to showcase and back up your DATs.
 ---
