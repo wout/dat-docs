@@ -1,6 +1,7 @@
 ---
 outline: [2, 3]
 ---
+
 # What's DAT?
 
 **DAT**, which stands for **Distributed Artifact Token**, represents tokens that combine at least two smaller tokens. This composition enhances their efficiency by 90% in block space utilization while accommodating 50 times larger codebases.
@@ -11,11 +12,11 @@ DATs can be fungible, semi-fungible, or non-fungible.
 
 ## How do DATs work?
 
-There are three distinct types of DAT tokens:
+A DAT is made up of at least two different tokens represented by a _scene_ and a _renderer_. There are in total three distinct types tokens:
 
 - **Scene**: These tokens are received by collectors and stored in their wallets. Scenes contain token-specific metadata and reference a _renderer_ token.
 - **Renderer**: Renderer tokens contain the necessary code to render all scenes within a DAT collection. Typically, there's just one _renderer_ token per collection.
-- **Dependency**: _Renderer_ tokens can have multiple dependencies if the full code exceeds the capacity of the _renderer_ token alone or if the renderer token requires the use of a supported library like [p5.js](https://p5js.org/) or similar.
+- **Dependency**: _Renderer_ tokens can have multiple dependencies if the full code exceeds the capacity of the _renderer_ token alone.
 
 Token viewers with support for DATs are able to gather all necessary information from the blockchain to render a scene. This includes the code from the _renderer_ token , all dependencies, information from other tokens or the state of the blockchain.
 
