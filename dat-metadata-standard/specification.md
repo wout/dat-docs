@@ -1,6 +1,7 @@
 ---
 outline: [2, 3]
 ---
+
 # Specification
 
 A single DAT is distributed over at least two tokens, represented by three possible token types: _scene_, _renderer_ and optionally, _dependency_.
@@ -21,7 +22,7 @@ The _scene_ token is the part the end user will receive in their wallet. It cont
 
 _Scene_ tokens require a `renderer` property to be present, referencing the token containing the code of the renderer.
 
-Although not mandatory, it's advisable to bundle token-specific properties in the `properties` object to avoid pollution of the token's root namespace. It will help token viewers locate and render those details. 
+Although not mandatory, it's advisable to bundle token-specific properties in the `properties` object to avoid pollution of the token's root namespace. It will help token viewers locate and render those details.
 
 ```json{19-22,24-26}
 {
@@ -33,7 +34,7 @@ Although not mandatory, it's advisable to bundle token-specific properties in th
 
         "image": <uri | array>,
         "mediaType": image/<mime_sub_type>,
-        
+
         "files": [{
           "name": <string>,
           "mediaType": <mime_type>,
@@ -41,7 +42,7 @@ Although not mandatory, it's advisable to bundle token-specific properties in th
           "license": <string>,
           <other_properties>
         }],
-        
+
         "renderer": {
           "main": <asset_name>,
           "arguments": <array>
@@ -57,6 +58,7 @@ Although not mandatory, it's advisable to bundle token-specific properties in th
 ```
 
 Properties for the _scene_ token:
+
 - **`renderer`** (_required_): an object with two properties
   - **`main`** (_required_): the `asset_name` of the renderer token within the
     current `policy_id` (e.g. `my_renderer`)
@@ -73,6 +75,7 @@ If a DAT uses data from the blockchain to drive its generative algorithm, it's i
 Several directives for dynamic arguments can be passed to the renderer. Before rendering a DAT, viewers must resolve any directives by querying the requested data from the blockchain and passing the actual values to the renderer.
 
 _Current token_
+
 - **`@tx_hash`** (`string`): transaction hash of the mint (can for example, be used as the seed value for a Sfc32 PRNG)
 - **`@epoch`** (`number`): epoch in which the token was minted
 - **`@slot`** (`number`): slot in which the token was minted
@@ -82,6 +85,7 @@ _Current token_
 - **`@owner_addresses`** (`string[]`): an array of owner addresses
 
 _Previously minted token_
+
 - **`@tx_hash.previous`** (`string | null`): transaction hash
 - **`@epoch.previous`** (`number | null`): epoch in which the token was minted
 - **`@slot.previous`** (`number | null`): slot in which the token was minted
@@ -91,6 +95,7 @@ _Previously minted token_
 - **`@arguments.previous`** (`array | null`): token's renderer arguments
 
 _Specific token (within the same policy_id)_
+
 - **`@tx_hash.asset_name`** (`string | null`): transaction hash
 - **`@epoch.asset_name`** (`number | null`): epoch in which the token was minted
 - **`@slot.asset_name`** (`number | null`): slot in which the token was minted
@@ -100,6 +105,7 @@ _Specific token (within the same policy_id)_
 - **`@arguments.asset_name`** (`array | null`): token's renderer arguments
 
 _Current blockchain state_
+
 - **`@current_epoch`** (`number`): current (latest) epoch
 - **`@current_slot`** (`number`): current (latest) slot
 - **`@current_block`** (`number`): current (latest) minted block
@@ -167,6 +173,7 @@ A single _renderer_ token can have multiple files of different mime types—more
 ```
 
 Properties for the _renderer_ token:
+
 - **`outputType`** (_required_): the mime type of the renderer's output (it's up to the viewer to define the supported formats)
 - **`dependencies`** (_optional_): an array of objects with dependency definitions
 
@@ -175,7 +182,7 @@ While not mandatory, adding a **`license`** property to every file in the `files
 :::
 
 ::: tip
-The renderer token should be burned after minting to free up the UTxO. 
+The renderer token should be burned after minting to free up the UTxO.
 :::
 
 ::: warning
@@ -255,14 +262,15 @@ This section applies to _onchain_ and _internal_ dependencies. Aside from how th
 
 ::: details
 What sets them apart is the scope in which they are available and by whom they are managed.
+
 - _onchain_: managed by creators, must be minted under the same `policy_id` as the _renderer_ token referencing them and only available within that policy
 - _internal_: managed by token viewers and globally available to anyone using the DAT Metadata Standard
-:::
+  :::
 
 Dependency tokens can have multiple parts if they do not fit into one 16kB transaction. The dependency referenced from the _renderer_ serves as an entry point, referencing the additional parts.
 
 ::: warning
-The number of accepted dependency parts is limited. Token viewers decide how many parts to allow or support. Ten parts should be more than sufficient in most scenarios. 
+The number of accepted dependency parts is limited. Token viewers decide how many parts to allow or support. Ten parts should be more than sufficient in most scenarios.
 :::
 
 ### **3.a.** Metadata
@@ -292,6 +300,7 @@ The code is stored in the **`files`** property as-is or as a base64-encoded stri
 ```
 
 Properties for the _dependency_ token:
+
 - **`parts`** (_optional_): an array with asset names (e.g. `asset_name_part_2`)
 
 ::: info
