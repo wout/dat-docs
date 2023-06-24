@@ -3,13 +3,13 @@
   --vp-font-family-mono: var(--font-mono);
   --vp-code-font-size: 1em;
 
-
   /* Text */
   --vp-c-text-1: var(--color-text);
   --vp-c-text-2: var(--color-text);
 
   /* Background */
   --vp-c-bg: var(--color-back);
+  --vp-c-bg-alt: var(--dimmed);
   --vp-c-bg-soft: var(--contrast);
   --vp-c-bg-soft-down: var(--color-back);
   --vp-sidebar-bg-color: var(--dimmed);
@@ -78,11 +78,15 @@ strong code {
   font-weight: 700;
 }
 
+.DocSearch {
+  --docsearch-key-gradient: var(--contrast);
+}
+
 .dark {
   /* Brand */
   --vp-c-brand: var(--ocre-light);
 
-    /* Button */
+  /* Button */
   --vp-button-brand-bg: var(--ocre-light);
   --vp-button-brand-border: var(--ocre-light);
   --vp-button-brand-hover-text: var(--venster-green);
