@@ -39,10 +39,6 @@ export default defineConfig({
             link: '/dat-metadata-standard/rationale',
           },
           {
-            text: 'Path to active',
-            link: '/dat-metadata-standard/path-to-active',
-          },
-          {
             text: 'Metadata examples',
             link: '/dat-metadata-standard/examples',
           },
