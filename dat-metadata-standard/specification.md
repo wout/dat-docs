@@ -186,7 +186,7 @@ The renderer token should be burned after minting to free up the UTxO.
 :::
 
 ::: warning
-Viewers may choose to limit the number of renderers per `policy_id`.
+Token viewers may choose to limit the number of renderers per `policy_id`.
 :::
 
 ### **2.b.** On-chain dependencies
@@ -246,7 +246,8 @@ These are off-chain dependencies managed by the viewer and made available to the
   "type": "external",
   "name": <library_name>,
   "version": <version_number>,
-  "source": <uri>
+  "source": <uri>,
+  "module": <boolean>
 }
 ```
 
@@ -254,12 +255,13 @@ These are off-chain dependencies managed by the viewer and made available to the
 - **`name`** (_required_): name of the library (list provided by viewers)
 - **`version`** (_required_): version of the library
 - **`source`** (_required_): URI of the library (IPFS, Arweave, etc.)
+- **`module`** (_required_): module flag; if set to `false`, an iife variant is used
 
 ::: details
-The _external_ dependency definitions are not referencing any token on the blockchain, unlike the _onchain_ and _internal_ variants. Their sole purpose is instructing token viewers which external dependency to load at runtime. More details can be found in the [Examples](/dat-metadata-standard/examples) section.
+The _external_ dependency definitions are not referencing any token on the blockchain, unlike the _onchain_ and _internal_ variants. Their sole purpose is instructing token viewers which external dependency to load at runtime. A list of available libraries is maintained in the [venster-external-dependencies repo](https://github.com/venster-io/venster-external-dependencies).
 :::
 
-### **2.e.** Instructions
+### **2.e.** Build instructions
 
 Instructions and/or requirements to reproduce the token can be stored in a file named `instructions`. For browser-based artworks, this must include the latest browser version(s) in which the token works. For projects executed locally, it must be a dependency or build file for a package manager. See [instruction examples](/dat-metadata-standard/examples) for more.
 
