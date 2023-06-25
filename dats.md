@@ -8,23 +8,23 @@ outline: [2, 3]
 
 Furthermore, DATs introduce a novel approach to instruct token viewers to fetch data from the blockchain. This capability enables the creation of token collections that are dynamic, evolving, and interconnected, unlocking new opportunities for artists to explore.
 
-DATs can be fungible, semi-fungible, or non-fungible.
+DATs can be fungible, semi-fungible, or non-fungible, and by embracing non-browser-based languages, they unlock many tools previously unavailable for creative coders to create on-chain generative tokens.
 
 ## How do DATs work?
 
-A DAT is made up of at least two different tokens represented by a _scene_ and a _renderer_. There are in total three distinct types tokens:
+A DAT consists of at least two tokens represented by a _scene_ and a _renderer_. There are, in total, three distinct types of tokens:
 
-- **Scene**: These tokens are received by collectors and stored in their wallets. Scenes contain token-specific metadata and reference a _renderer_ token.
+- **Scene**: These are the tokens collectors receive in their wallets. Scenes contain token-specific metadata and reference a _renderer_ token.
 - **Renderer**: Renderer tokens contain the necessary code to render all scenes within a DAT collection. Typically, there's just one _renderer_ token per collection.
-- **Dependency**: _Renderer_ tokens can have multiple dependencies if the full code exceeds the capacity of the _renderer_ token alone.
+- **Dependency**: _Renderer_ tokens can have multiple dependencies if the code's size exceeds the capacity of the _renderer_ token alone.
 
-Token viewers with support for DATs are able to gather all necessary information from the blockchain to render a scene. This includes the code from the _renderer_ token , all dependencies, information from other tokens or the state of the blockchain.
+Token viewers with DAT support can gather all necessary information from the blockchain to render a scene, including the code from the _renderer_ token, all its dependencies, information from other tokens and the state of the blockchain.
 
 ## How to create a DAT?
 
 The easiest way to create a DAT collection is to launch on [venster.art](https://venster.art/) (available in September 2023). Venster handles all the technical details and provides a user-friendly interface to create and manage your DAT collections.
 
-However, if you prefer to take an independent approach, you have the freedom to create DATs and mint them on any platform. By adhering to the instructions outlined on the [specification page](/dat-metadata-standard/specification), viewers equipped with support for the standard will be able to render your collection.
+However, if you prefer an independent approach, you can create DATs and mint them on any platform. By adhering to the instructions outlined on the [specification page](/dat-metadata-standard/specification), viewers with support for the standard can render your collection.
 
 ## How to view a DAT?
 
