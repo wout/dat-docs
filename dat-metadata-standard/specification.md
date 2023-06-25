@@ -200,9 +200,14 @@ These are policy-specific on-chain dependencies managed by the creator. They mus
 }
 ```
 
+- **`type`** (_required_): dependency type
+- **`asset_name`** (_required_): name of the asset within the same policy
+
 ### **2.c.** Internal dependencies:
 
-These are on-chain dependencies managed internally by the viewer and made available to the _renderer_ at runtime. They can be referenced by using the dependency's asset `fingerprint`:
+These are on-chain dependencies managed internally by the viewer and made available to the _renderer_ at runtime.
+
+They can be referenced by using the dependency's asset `fingerprint`:
 
 ```json
 {
@@ -211,7 +216,10 @@ These are on-chain dependencies managed internally by the viewer and made availa
 }
 ```
 
-Or the asset's `policy_id` and `asset_name`:
+- **`type`** (_required_): dependency type
+- **`fingerprint`** (_required_): asset fingerprint
+
+Alternatively, the asset's `policy_id` and `asset_name` can be used:
 
 ```json
 {
@@ -220,6 +228,10 @@ Or the asset's `policy_id` and `asset_name`:
   "asset_name": <asset_name>
 }
 ```
+
+- **`type`** (_required_): dependency type
+- **`asset_name`** (_required_): name of the asset
+- **`policy_id`** (_required_): policy id of the asset
 
 ::: tip
 Using the `fingerprint` is more concise but doesn't tell anything about the referenced asset. Although more verbose, the second option is more readable thanks to the human-readable `asset_name`.
@@ -233,9 +245,15 @@ These are off-chain dependencies managed by the viewer and made available to the
 {
   "type": "external",
   "name": <library_name>,
-  "version": <version_number>
+  "version": <version_number>,
+  "source": <uri>
 }
 ```
+
+- **`type`** (_required_): dependency type
+- **`name`** (_required_): name of the library (list provided by viewers)
+- **`version`** (_required_): version of the library
+- **`source`** (_required_): URI of the library (IPFS, Arweave, etc.)
 
 ::: details
 The _external_ dependency definitions are not referencing any token on the blockchain, unlike the _onchain_ and _internal_ variants. Their sole purpose is instructing token viewers which external dependency to load at runtime. More details can be found in the [Examples](/dat-metadata-standard/examples) section.
