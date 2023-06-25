@@ -131,7 +131,7 @@ For more information on the implementation of web dependencies, please refer to 
 
 ### Non-browser-based
 
-Generative artists often employ tools that operate outside the confines of web browsers. Currently, there are at least two token collections on Cardano's blockchain that utilize non-web technologies for rendering.
+Generative artists often employ tools that operate outside the confines of web browsers. Currently, there are at least two token collections on Cardano's blockchain that do not use web technologies for rendering.
 
 To facilitate this process, renderer tokens include a build script in their files, providing a comprehensive set of instructions to reproduce the token on any computer with docker installed.
 
