@@ -6,8 +6,8 @@ export default defineConfig({
   description: 'Get up-to speed with Venster and learn how to create DATs',
   themeConfig: {
     logo: {
-      light: 'venster-named-light-07-optim.svg',
-      dark: 'venster-named-dark-07-optim.svg',
+      light: '/logo/venster-named-light-07-optim.svg',
+      dark: '/logo/venster-named-dark-07-optim.svg',
     },
 
     siteTitle: false,
