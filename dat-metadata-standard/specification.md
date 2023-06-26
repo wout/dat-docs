@@ -6,7 +6,7 @@ outline: [2, 3]
 
 A single DAT is distributed over at least two tokens, represented by three possible token types: _scene_, _renderer_ and optionally, _dependency_.
 
-Typically, _scene_ tokens don't hold any code. They carry a reference to the _renderer_ token, arguments for invocation of the renderer and token-specific properties. _Scene_ tokens are therefore relatively small (less than 3kB). All _scene_ tokens in a collection reference one, or at most a few, _renderer_ tokens.
+Typically, _scene_ tokens don't hold any code. They carry a reference to the _renderer_ token, arguments for invocation of the _renderer_ and token-specific properties. _Scene_ tokens are therefore relatively small (less than 3kB). All _scene_ tokens in a collection reference one, or at most a few, _renderer_ tokens.
 
 The code to render all _scene_ tokens is stored in a _renderer_ token, which in turn can reference _dependency_ tokens containing shared libraries or assets. _Dependency_ tokens are considered extensions to the _renderer_ and can not be referenced directly by _scene_ tokens.
 
@@ -60,10 +60,10 @@ Although not mandatory, it's advisable to bundle token-specific properties in th
 Properties for the _scene_ token:
 
 - **`renderer`** (_required_): an object with two properties
-  - **`main`** (_required_): the `asset_name` of the renderer token within the
+  - **`main`** (_required_): the `asset_name` of the _renderer_ token within the
     current `policy_id` (e.g. `my_renderer`)
   - **`arguments`** (_required_): an array with arbitrary values used as
-    arguments for the invocation of the renderer (e.g.: `[123]`)
+    arguments for the invocation of the _renderer_ (e.g.: `[123]`)
 - **`properties`** (_optional_): an object with arbitrary key/value pairs describing the token's (unique) properties
 
 ::: details
@@ -92,7 +92,7 @@ _Previously minted token_
 - **`@block.previous`** (`number | null`): block in which the token was minted
 - **`@block_size.previous`** (`number | null`): the size of the token's block
 - **`@block_hash.previous`** (`string | null`): hash of the token's block
-- **`@arguments.previous`** (`array | null`): token's renderer arguments
+- **`@arguments.previous`** (`array | null`): token's _renderer_ arguments
 
 _Specific token (within the same policy_id)_
 
@@ -102,7 +102,7 @@ _Specific token (within the same policy_id)_
 - **`@block.asset_name`** (`number | null`): block in which the token was minted
 - **`@block_size.asset_name`** (`number | null`): the size of the token's block
 - **`@block_hash.asset_name`** (`string | null`): hash of the token's block
-- **`@arguments.asset_name`** (`array | null`): token's renderer arguments
+- **`@arguments.asset_name`** (`array | null`): token's _renderer_ arguments
 
 _Current blockchain state_
 
@@ -112,7 +112,7 @@ _Current blockchain state_
 - **`@current_block_size`** (`number`): the size of the current block
 - **`@current_block_hash`** (`string`): hash of the current block
 
-Passing argument directives to the renderer works just like static arguments. For example:
+Passing argument directives to the _renderer_ works just like static arguments. For example:
 
 ```json
 [
@@ -141,7 +141,7 @@ The _renderer_ token is at the heart of a DAT collection and can either be a sel
 
 The _renderer_'s code is stored in the `files` property as-is or as a base64-encoded string. The `name` property of the file must match the `asset_name` with the appropriate file extension, so viewers can filter out the renderer-related files.
 
-A renderer must always define an `outputType`. Token viewers decide which output types to support.
+A _renderer_ must always define an `outputType`. Token viewers decide which output types to support.
 
 ::: info
 A single _renderer_ token can have multiple files of different mime types—more in the [examples](/dat-metadata-standard/examples) section.
@@ -180,14 +180,14 @@ Properties for the _renderer_ token:
 
 - **`outputType`** (_required_): the mime type of the renderer's output (it's up to the viewer to define the supported formats)
 - **`dependencies`** (_optional_): an array of objects with dependency definitions
-- **`browsers`** (_required for browser-based DATs_): an object with versions of browsers against which the renderer is tested
+- **`browsers`** (_required for browser-based DATs_): an object with versions of browsers against which the _renderer_ is tested
 
 ::: info
 While not mandatory, adding a **`license`** property to every file in the `files` section is advisable—more info on licenses is below in section 2.f.
 :::
 
 ::: tip
-The renderer token should be burned after minting to free up the UTxO.
+The _renderer_ token should be burned after minting to free up the UTxO.
 :::
 
 ::: warning
@@ -268,7 +268,27 @@ The _external_ dependency definitions are not referencing any token on the block
 
 ### **2.e.** Build instructions
 
-Instructions and/or requirements to reproduce the token can be stored in a file named `instructions`. For browser-based artworks, this must include the latest browser version(s) in which the token works. For projects executed locally, it must be a dependency or build file for a package manager. See [instruction examples](/dat-metadata-standard/examples) for more.
+::: info
+This section only applies to non-browser-based renderers.
+:::
+
+The build of a locally executed token revolves around a Dockerfile that should be included in the files of the _renderer_ token. Optionally, package or configuration files can be included that are required by the Dockerfile to build the image.
+
+```json
+{
+  "files": [{
+    "name": "Dockerfile",
+    "mediaType": "text/plain",
+    "src": <array>
+  }]
+}
+```
+
+::: details
+Token viewers will download all the files of a _renderer_ before building. It's up to the Dockerfile to grab the correct files from the build context.
+
+Creators may also choose to embed everything inside the Dockerfile. There are no other conventions. As long as the container's entry point can be called with the arguments provided by the _scene_ token.
+:::
 
 ### **2.f.** License types
 
