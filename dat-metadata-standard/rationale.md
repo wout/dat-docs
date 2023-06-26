@@ -135,7 +135,11 @@ There has been a lot of discussion in the community around the term "on-chain". 
 This standard is only interested in storing the part produced by the creator. Everything else should be described as external dependencies unless it is small enough to be stored as an on-chain dependency. Preferably, token viewers manage on-chain dependencies to avoid duplication.
 :::
 
-One
+To enhance a token's archival qualities, DATs require a list of supported browsers with their versions in which the program is tested and confirmed to work correctly. It will help collectors to reproduce their token collections in the distant future.
+
+::: tip
+Venster's open-source desktop viewers get a major update every year. They come with a full browser embedded. Creators are encouraged to reference in which venster viewer their DAT is tested.
+:::
 
 ### Variant 2: **Non-browser-based**
 

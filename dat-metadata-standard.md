@@ -41,7 +41,7 @@ Without imposing more restrictions on creators, how do we drastically reduce the
 
 ### Problem 3: **Diversity of tools**
 
-While JavaScript has become the dominant language for on-chain art, it's only a fraction of other languages and tools available to artists. Many established artists use tools that are not based on web technologies and adapt or limit their workflow to make it run in a web browser.
+While JavaScript has become the dominant language for on-chain art, it's only a fraction of other languages and tools available to artists. Many established artists use tools that are not based on web technologies and sometimes adapt or limit their workflow to make their work run in a web browser.
 
 What is the best interface for viewers to support a diverse set of tools and languages?
 

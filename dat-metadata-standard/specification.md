@@ -24,7 +24,7 @@ _Scene_ tokens require a `renderer` property to be present, referencing the toke
 
 Although not mandatory, it's advisable to bundle token-specific properties in the `properties` object to avoid pollution of the token's root namespace. It will help token viewers locate and render those details.
 
-```json{19-22,24-26}
+```json{15,19-22,24-26}
 {
   "721": {
     "<policy_id>": {
@@ -147,7 +147,7 @@ A renderer must always define an `outputType`. Token viewers decide which output
 A single _renderer_ token can have multiple files of different mime types—more in the [examples](/dat-metadata-standard/examples) section.
 :::
 
-```json{9,13,15-18}
+```json{9,13,15-18,20-22}
 {
   "721": {
     "<policy_id>": {
@@ -165,7 +165,11 @@ A single _renderer_ token can have multiple files of different mime types—more
         "dependencies": [{
           "type": <string>,
           <other_properties>
-        }]
+        }],
+
+        "browsers": {
+          <browser_name>: <browser_version>
+        }
       }
     }
   }
@@ -176,6 +180,7 @@ Properties for the _renderer_ token:
 
 - **`outputType`** (_required_): the mime type of the renderer's output (it's up to the viewer to define the supported formats)
 - **`dependencies`** (_optional_): an array of objects with dependency definitions
+- **`browsers`** (_required for browser-based DATs_): an object with versions of browsers against which the renderer is tested
 
 ::: info
 While not mandatory, adding a **`license`** property to every file in the `files` section is advisable—more info on licenses is below in section 2.f.
