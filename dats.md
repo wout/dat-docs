@@ -8,7 +8,7 @@ outline: [2, 3]
 
 Furthermore, DATs introduce a novel approach to instruct token viewers to fetch data from the blockchain. This capability enables the creation of token collections that are dynamic, evolving, and interconnected, unlocking new opportunities for artists to explore.
 
-DATs can be fungible, semi-fungible, or non-fungible, and by embracing non-browser-based languages, they unlock many tools previously unavailable for creative coders to create on-chain generative tokens.
+DATs can be fungible, semi-fungible, or non-fungible. By embracing non-browser-based languages, they unlock many tools previously unavailable for creative coders to create on-chain generative tokens.
 
 ## How do DATs work?
 
