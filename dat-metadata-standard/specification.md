@@ -168,7 +168,7 @@ A single _renderer_ token can have multiple files of different mime types, as lo
         }],
 
         "browsers": {
-          <browser_name>: <browser_version>
+          <browser_name>: <major_version>
         }
       }
     }
