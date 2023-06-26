@@ -144,7 +144,7 @@ The _renderer_'s code is stored in the `files` property as-is or as a base64-enc
 A _renderer_ must always define an `outputType`. Token viewers decide which output types to support.
 
 ::: info
-A single _renderer_ token can have multiple files of different mime types—more in the [examples](/dat-metadata-standard/examples) section.
+A single _renderer_ token can have multiple files of different mime types, as long as the file names match the token's `asset_name`.
 :::
 
 ```json{9,13,15-18,20-22}
