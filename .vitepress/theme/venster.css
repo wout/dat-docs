@@ -69,6 +69,13 @@ html {
   border: none;
 }
 
+.custom-block p + p {
+  color: var(--venster-green-light);
+}
+.dark .custom-block p + p {
+  color: var(--venster-grey);
+}
+
 code,
 .vp-doc div[class*='language-'] {
   font-weight: 500;
