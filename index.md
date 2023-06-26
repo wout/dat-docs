@@ -17,7 +17,7 @@ features:
   - title: Minting on Venster (soon)
     details: Everything you need to know about minting generative tokens on Venster.
   - title: Publishing on Venster (soon)
-    details: Find out how to publish articles on Venster using our Markdown editor.
+    details: Find out how to mint articles on Venster using our Markdown editor.
   - title: The Venster Viewer (soon)
     details: Learn how you can use the desktop viewer to showcase and back up your DATs.
 ---
