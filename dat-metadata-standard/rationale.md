@@ -119,7 +119,7 @@ Policy id: `5120000fd4f7584a4ff2b2f5fe71f735f84315106dd6014ac581baa5`
 
 ## Solutions 3 and 4: **Diversity of tools and archival qualities**
 
-Although problems 3 and 4 address different topics, one solution solves both: providing a standardized way to describe dependencies.
+Although problems 3 and 4 address different topics, one solution solves both: providing a standardized way to describe dependencies and build instructions.
 
 There are two variants of DATs: browser-based and non-browser-based. Almost all on-chain generative tokens on any blockchain fall into the first group. This standard supports both variants.
 

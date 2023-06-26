@@ -38,10 +38,6 @@ export default defineConfig({
             text: 'Rationale',
             link: '/dat-metadata-standard/rationale',
           },
-          {
-            text: 'Metadata examples',
-            link: '/dat-metadata-standard/examples',
-          },
         ],
       },
     ],

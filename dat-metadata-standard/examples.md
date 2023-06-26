@@ -1,3 +1,0 @@
-# Metadata examples
-
-[TO-DO]
