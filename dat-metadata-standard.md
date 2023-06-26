@@ -9,7 +9,7 @@ This rather technical section is intended for the CIP (Cardano Improvement Propo
 
 ### Copyright
 
-The DAT Metadata Standard is published under the [CC-BY-SA-4.0](https://creativecommons.org/licenses/by-sa/4.0/legalcode) license.
+The DAT Metadata Standard is published under the [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/legalcode) license.
 
 ## Abstract
 
