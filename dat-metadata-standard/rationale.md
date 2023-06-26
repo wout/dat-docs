@@ -68,9 +68,9 @@ Links to the mentioned tokens:
 
 ## Solution 2: **Inefficient use of block space**
 
-By looking at three real-world cases, it becomes clear that by using DATs, roughly 90% less block space is required compared to using isolated monolithic NFTs.
+By looking at three real-world cases, it becomes clear that using DATs requires roughly 90% less block space than using isolated monolithic NFTs.
 
-The data used in the following examples is extracted from existing token collections. The first two examples used monolithic NFTs while the the third one used DATs.
+The data used in the following examples is extracted from existing token collections. The first two examples used monolithic NFTs, while the third one used DATs.
 
 ### Example 1
 
@@ -117,28 +117,36 @@ By using DATs, **97.46 %** less block space was used. It is also important to no
 Policy id: `5120000fd4f7584a4ff2b2f5fe71f735f84315106dd6014ac581baa5`
 :::
 
-## Solution 3: **Diversity of tools**
+## Solutions 3 and 4: **Diversity of tools and archival qualities**
 
-DATs can be subdivided in two groups: browser-based and non-browser-based. Almost all on-chain generative tokens on any blockchain fall into the first group. This standard supports both variants.
+Although problems 3 and 4 address different topics, one solution solves both: providing a standardized way to describe dependencies.
 
-### Browser-based
+There are two variants of DATs: browser-based and non-browser-based. Almost all on-chain generative tokens on any blockchain fall into the first group. This standard supports both variants.
 
-Current token viewers and blockchain explorers already support monolithic browser-based generative tokens. The most commonly used output formats are HTML and SVG, which can handle embedded JavaScript and don't have any additional requirements.
+### Variant 1: **Browser-based**
 
-Through dependency definitions, DATs can instruct token viewers to load specific off-chain libraries at runtime. Token viewers can decide which libraries, and versions thereof, to support.
+Existing token viewers and blockchain explorers already support monolithic browser-based generative tokens. The most commonly used output formats are HTML and SVG, which can handle embedded JavaScript but can't have any dependencies.
 
-For more information on the implementation of web dependencies, please refer to _Solution 4_ below.
+Through [dependency definitions](/dat-metadata-standard/specification.html#_2-b-on-chain-dependencies), DATs can instruct token viewers to load libraries, such as [p5.js](https://p5js.org/), to allow generative tokens beyond just plain JavaScript. Token viewers can decide which libraries, and versions thereof, to support.
 
-### Non-browser-based
+::: details
+There has been a lot of discussion in the community around the term "on-chain". Some are of the opinion that a generative token can't be called on-chain if it has external dependencies, such as p5.js.
 
-Generative artists often employ tools that operate outside the confines of web browsers. Currently, there are at least two token collections on Cardano's blockchain that do not use web technologies for rendering.
+This standard is only interested in storing the part produced by the creator. Everything else should be described as external dependencies unless it is small enough to be stored as an on-chain dependency. Preferably, token viewers manage on-chain dependencies to avoid duplication.
+:::
 
-To facilitate this process, renderer tokens include a build script in their files, providing a comprehensive set of instructions to reproduce the token on any computer with docker installed.
+One
 
-For more information on the implementation of local dependencies, please refer to _Solution 4_ below.
+### Variant 2: **Non-browser-based**
 
-## Solution 4: **Dependencies and archival qualities**
+Generative artists regularly use tools that run outside the confines of web browsers. At least two on-chain generative token collections on Cardano do not use web technologies for rendering and describe the reproduction process in an improvised way.
 
-Ensuring the long-term preservation of a generative token's code is the primary objective of storing it on the blockchain. Archivability is a crucial element of the standard, guaranteeing the token's ability to be replicated at any given point in the future.
+DATs solve this by including a [Dockerfile](https://docs.docker.com/engine/reference/builder/) and, if necessary, a package file for the appropriate language. Viewers supporting this variant only need Docker installed to render the token using the unique arguments given by the _scene_ token.
 
-However, in the past, there has been confusion over the term on-chain, as some percieve the line is drawn between the creator's code, and its dependencies, if any. For example,
+::: details
+The choice for [Docker](https://www.docker.com/) is one in favor of simplicity and familiarity. It requires the least effort and additional tooling on the side of the token viewer or anyone wanting to reproduce a generative token. If a more suitable solution presents itself with the same ease of use in the future, then it may be added as an alternative.
+:::
+
+::: warning
+As of today (June 2023), no DAT collections are yet employing the non-browser-based variant. However, at least two are in the making, and their development may bring minor changes to the proposed solution.
+:::

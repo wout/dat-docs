@@ -45,7 +45,7 @@ While JavaScript has become the dominant language for on-chain art, it's only a 
 
 What is the best interface for viewers to support a diverse set of tools and languages?
 
-### Problem 4: **Dependencies and archival qualities**
+### Problem 4: **Archival qualities**
 
 Storing all dependencies for a generative token on the blockchain is not always convenient, sensible, or even viable. Examples are p5.js, three.js, Processing, and Blender, to name a few. There is currently no way to describe token dependencies, so third parties can render or reproduce digital artifacts.
 
