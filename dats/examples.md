@@ -12,9 +12,9 @@ February 2023, [MICK+WOUT](https://mick-wout.com/) and [Alexander Watanabe](http
 
 ![The Perfect NFT - Temporal Bidding Declarations](/dats/examples/tpn-tbd-banner-fs8.png)
 
-The first part of the collection was called _Temporal Bidding Declarations_, a series of receipts serving as proof of participation. In total, 3409 TBDs were minted. [View the TBDs on venster.io](https://venster.io/policies/5120000fd4f7584a4ff2b2f5fe71f735f84315106dd6014ac581baa5/assets).
+The first part of the collection was called _Temporal Bidding Declarations_, a series of receipts serving as proof of participation. In total, 3409 TBDs were minted. [View the TBDs on venster.io](https://preprod.venster.io/policies/5120000fd4f7584a4ff2b2f5fe71f735f84315106dd6014ac581baa5/assets).
 
-The actual pieces were minted after the performance. Each composition is derived from a number between 0 and 511, representing a binary value. [View the pieces on venster.io](https://venster.io/policies/51211110add284b78cff66364ea4997f8612b91ee07d8a2339d7cb0b/assets)
+The actual pieces were minted after the performance. Each composition is derived from a number between 0 and 511, representing a binary value. [View the pieces on venster.io](https://preprod.venster.io/policies/51211110add284b78cff66364ea4997f8612b91ee07d8a2339d7cb0b/assets)
 
 ![The Perfect NFT](/dats/examples/tpb-banner-fs8.png)
 
@@ -22,7 +22,7 @@ Both collections are made up of a _scene_ token, a _renderer_ token, an SVG libr
 
 ## Example 2: **P5.js scene**
 
-For demonstration purposes, we minted a p5.js example, which can be [viewed here on venster.io](https://venster.io/assets/asset1mtku0ddylzrqu7tzmll3q9zq62t28vfkn8rvp3). It's entirely based on code from Daniel Shiffman's book the [Nature of Code (Chapter 6 - Autonomous Agents)](https://natureofcode.com/book/chapter-6-autonomous-agents/).
+For demonstration purposes, we minted a p5.js example, which can be [viewed here on venster.io](https://preprod.venster.io/assets/asset1mtku0ddylzrqu7tzmll3q9zq62t28vfkn8rvp3). It's entirely based on code from Daniel Shiffman's book the [Nature of Code (Chapter 6 - Autonomous Agents)](https://natureofcode.com/book/chapter-6-autonomous-agents/).
 
 ![The Perfect NFT](/dats/examples/p5js-flock.png)
 
