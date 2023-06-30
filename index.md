@@ -14,7 +14,7 @@ hero:
       link: /dat-metadata-standard
 
 features:
-  - title: Minting on venster (soon)
+  - title: Minting on Venster (soon)
     details: Everything you need to know about minting generative tokens on <strong>venster genart</strong>.
   - title: Publishing on Venster (soon)
     details: Explore minting articles on <strong>venster publishing</strong> using our markdown editor.
