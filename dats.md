@@ -28,6 +28,6 @@ However, if you prefer an independent approach, you can create DATs and mint the
 
 ## How to view a DAT?
 
-Currently, only [venster.io](https://venster.io/) supports the DMS (DAT Metadata Standard). We're developing a new web viewer that can be embedded and a free desktop viewer with full-screen mode and token backup functionality. Both will be available by September 2023.
+Currently, only [venster.io](https://venster.io/) supports the DMS (DAT Metadata Standard). It's a proof-of-concept that will be replaced by [venster.art](https://venster.art/) in the Autumn of 2023. A free desktop viewer with full-screen mode and token backup functionality is also in development.
 
-We plan to make the new viewer component open-source to boost adoption by other platforms and services. Additionally, we are discussing with other blockchain viewers to adopt the standard. Expect more extensive DAT support soon.
+Our new viewer component will be made open-source to boost adoption by other platforms and services. Additionally, we are discussing with other blockchain viewers to adopt the standard. Expect more extensive DAT support soon.

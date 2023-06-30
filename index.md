@@ -14,10 +14,10 @@ hero:
       link: /dat-metadata-standard
 
 features:
-  - title: Minting on Venster (soon)
-    details: Everything you need to know about minting generative tokens on Venster.
+  - title: Minting on venster (soon)
+    details: Everything you need to know about minting generative tokens on <strong>venster genart</strong>.
   - title: Publishing on Venster (soon)
-    details: Find out how to mint articles on Venster using our markdown editor.
-  - title: The Venster Viewer (soon)
-    details: Learn how you can use the desktop viewer to showcase and back up your DATs.
+    details: Explore minting articles on <strong>venster publishing</strong> using our markdown editor.
+  - title: The Venster Viewers (soon)
+    details: Learn how you can use the desktop viewers to showcase and back up your DATs.
 ---
