@@ -15,17 +15,17 @@
   --vp-sidebar-bg-color: var(--dimmed);
 
   /* Brand */
-  --vp-c-brand: var(--ocre);
+  --vp-c-brand: var(--ochre);
   --vp-c-brand-light: var(--blue-light);
 
   /* Button */
-  --vp-button-brand-bg: var(--ocre);
-  --vp-button-brand-border: var(--ocre);
+  --vp-button-brand-bg: var(--ochre);
+  --vp-button-brand-border: var(--ochre);
   --vp-button-brand-text: var(--contrast);
   --vp-button-brand-hover-bg: var(--color-text);
   --vp-button-brand-hover-border: var(--color-text);
-  --vp-button-brand-active-bg: var(--ocre);
-  --vp-button-brand-active-border: var(--ocre);
+  --vp-button-brand-active-bg: var(--ochre);
+  --vp-button-brand-active-border: var(--ochre);
   --vp-button-alt-border: var(--venster-grey);
   --vp-button-alt-bg: var(--venster-grey);
   --vp-button-alt-text: var(--contrast);
@@ -41,7 +41,7 @@
   --vp-custom-block-tip-bg: var(--dimmed);
   --vp-custom-block-tip-text: var(--green);
   --vp-custom-block-warning-bg: var(--dimmed);
-  --vp-custom-block-warning-text: var(--ocre);
+  --vp-custom-block-warning-text: var(--ochre);
   --vp-custom-block-details-bg: var(--dimmed);
   --vp-custom-block-details-text: var(--venster-green-light);
   --vp-custom-block-danger-bg: var(--dimmed);
@@ -91,11 +91,11 @@ strong code {
 
 .dark {
   /* Brand */
-  --vp-c-brand: var(--ocre-light);
+  --vp-c-brand: var(--ochre-light);
 
   /* Button */
-  --vp-button-brand-bg: var(--ocre-light);
-  --vp-button-brand-border: var(--ocre-light);
+  --vp-button-brand-bg: var(--ochre-light);
+  --vp-button-brand-border: var(--ochre-light);
   --vp-button-brand-hover-text: var(--venster-green);
   --vp-button-alt-border: var(--venster-grey-dark);
   --vp-button-alt-bg: var(--venster-grey-dark);
@@ -108,8 +108,8 @@ strong code {
   --vp-custom-block-tip-bg: var(--contrast);
   --vp-custom-block-tip-text: var(--green-light);
   --vp-custom-block-warning-bg: var(--contrast);
-  --vp-custom-block-warning-border: var(--ocre);
-  --vp-custom-block-warning-text: var(--ocre-light);
+  --vp-custom-block-warning-border: var(--ochre);
+  --vp-custom-block-warning-text: var(--ochre-light);
   --vp-custom-block-details-text: var(--venster-grey-light);
   --vp-custom-block-danger-bg: var(--contrast);
 
