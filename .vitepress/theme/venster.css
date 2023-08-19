@@ -15,17 +15,17 @@
   --vp-sidebar-bg-color: var(--dimmed);
 
   /* Brand */
-  --vp-c-brand: var(--ochre);
-  --vp-c-brand-light: var(--blue-light);
+  --vp-c-brand: var(--jade);
+  --vp-c-brand-light: var(--pale-orchid);
 
   /* Button */
-  --vp-button-brand-bg: var(--ochre);
-  --vp-button-brand-border: var(--ochre);
+  --vp-button-brand-bg: var(--jade);
+  --vp-button-brand-border: var(--jade);
   --vp-button-brand-text: var(--contrast);
   --vp-button-brand-hover-bg: var(--color-text);
   --vp-button-brand-hover-border: var(--color-text);
-  --vp-button-brand-active-bg: var(--ochre);
-  --vp-button-brand-active-border: var(--ochre);
+  --vp-button-brand-active-bg: var(--jade);
+  --vp-button-brand-active-border: var(--jade);
   --vp-button-alt-border: var(--venster-grey);
   --vp-button-alt-bg: var(--venster-grey);
   --vp-button-alt-text: var(--contrast);
@@ -39,17 +39,18 @@
   --vp-custom-block-info-bg: var(--dimmed);
   --vp-custom-block-info-text: var(--venster-green-light);
   --vp-custom-block-tip-bg: var(--dimmed);
-  --vp-custom-block-tip-text: var(--green);
+  --vp-custom-block-tip-text: var(--jade);
   --vp-custom-block-warning-bg: var(--dimmed);
-  --vp-custom-block-warning-text: var(--ochre);
+  --vp-custom-block-warning-text: var(--orange);
   --vp-custom-block-details-bg: var(--dimmed);
   --vp-custom-block-details-text: var(--venster-green-light);
   --vp-custom-block-danger-bg: var(--dimmed);
+  --vp-custom-block-dange-text: var(--amaranth);
 
   /* Code */
   --vp-code-block-bg: var(--text-dark);
   --vp-c-mute: var(--dimmed);
-  --vp-c-text-code: var(--green);
+  --vp-c-text-code: var(--jade);
   --vp-code-copy-code-bg: var(--base-dark);
   --vp-code-copy-code-hover-bg: var(--dimmed-dark);
   --vp-custom-block-info-code-bg: var(--contrast);
@@ -91,11 +92,11 @@ strong code {
 
 .dark {
   /* Brand */
-  --vp-c-brand: var(--ochre-light);
+  --vp-c-brand: var(--phosphor);
 
   /* Button */
-  --vp-button-brand-bg: var(--ochre-light);
-  --vp-button-brand-border: var(--ochre-light);
+  --vp-button-brand-bg: var(--phosphor);
+  --vp-button-brand-border: var(--phosphor);
   --vp-button-brand-hover-text: var(--venster-green);
   --vp-button-alt-border: var(--venster-grey-dark);
   --vp-button-alt-bg: var(--venster-grey-dark);
@@ -106,17 +107,20 @@ strong code {
   --vp-custom-block-info-bg: var(--contrast);
   --vp-custom-block-info-text: var(--venster-grey-light);
   --vp-custom-block-tip-bg: var(--contrast);
-  --vp-custom-block-tip-text: var(--green-light);
+  --vp-custom-block-tip-text: var(--robin-egg);
   --vp-custom-block-warning-bg: var(--contrast);
-  --vp-custom-block-warning-border: var(--ochre);
-  --vp-custom-block-warning-text: var(--ochre-light);
+  --vp-custom-block-warning-border: var(--jade);
+  --vp-custom-block-warning-text: var(--phosphor);
   --vp-custom-block-details-text: var(--venster-grey-light);
   --vp-custom-block-danger-bg: var(--contrast);
 
   /* Code */
   --vp-code-block-bg: var(--contrast-dark);
-  --vp-c-text-code: var(--green-light);
+  --vp-c-text-code: var(--robin-egg);
   --vp-code-line-highlight-color: rgba(0, 0, 0, 0.4);
+
+  /* Borders */
+  --vp-c-divider: rgba(255, 255, 255, 0.2);
 }
 
 .vp-doc a {
