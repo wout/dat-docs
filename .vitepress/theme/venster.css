@@ -92,11 +92,11 @@ strong code {
 
 .dark {
   /* Brand */
-  --vp-c-brand: var(--phosphor);
+  --vp-c-brand: var(--napels-yellow);
 
   /* Button */
-  --vp-button-brand-bg: var(--phosphor);
-  --vp-button-brand-border: var(--phosphor);
+  --vp-button-brand-bg: var(--napels-yellow);
+  --vp-button-brand-border: var(--napels-yellow);
   --vp-button-brand-hover-text: var(--venster-green);
   --vp-button-alt-border: var(--venster-grey-dark);
   --vp-button-alt-bg: var(--venster-grey-dark);
@@ -133,4 +133,10 @@ strong code {
 
 .vp-doc strong {
   font-weight: 500;
+}
+
+.VPButton,
+.VPFeature,
+.DocSearch-Button {
+  border-radius: 3px !important;
 }
