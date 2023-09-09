@@ -1,9 +1,7 @@
-ARG NODE_VERSION=18
-
 # ##############################
 # Build site
 # ##############################
-FROM node:$NODE_VERSION-alpine as vite_build
+FROM node:20-alpine as vite_build
 WORKDIR /build
 COPY . .
 RUN npm install -g npm@latest typescript vite
