@@ -2,15 +2,10 @@ import { defineConfig } from 'vitepress'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  title: 'Venster Documentation',
-  description: 'Get up-to speed with Venster and learn how to create DATs',
+  title: 'DAT Medadata Standard',
+  description: 'Get up-to speed and learn how to create DATs',
   themeConfig: {
-    logo: {
-      light: '/logo/venster-named-light-07-optim.svg',
-      dark: '/logo/venster-named-dark-07-optim.svg',
-    },
-
-    siteTitle: false,
+    siteTitle: 'DAT Metadata Standard',
 
     search: {
       provider: 'local',
@@ -42,10 +37,7 @@ export default defineConfig({
       },
     ],
 
-    socialLinks: [
-      { icon: 'discord', link: 'https://discord.com/invite/64ct9tQzgn' },
-      { icon: 'github', link: 'https://github.com/venster-io' },
-    ],
+    socialLinks: [{ icon: 'github', link: 'https://github.com/wout/dat-docs' }],
   },
 
   head: [
@@ -81,8 +73,11 @@ export default defineConfig({
       { rel: 'mask-icon', href: 'safari-pinned-tab.svg', color: '#363c31' },
     ],
     ['link', { rel: 'manifest', href: '/site.webmanifest' }],
-    ['meta', { name: 'apple-mobile-web-app-title', content: 'venster' }],
-    ['meta', { name: 'application-name', content: 'venster' }],
+    [
+      'meta',
+      { name: 'apple-mobile-web-app-title', content: 'DAT Metadata Standard' },
+    ],
+    ['meta', { name: 'application-name', content: 'DAT Metadata Standard' }],
     ['meta', { name: 'msapplication-TileColor', content: '#ffffff' }],
     ['meta', { name: 'theme-color', content: '#ffffff' }],
     [
@@ -90,7 +85,7 @@ export default defineConfig({
       {
         defer: '',
         'data-api': '/api/event',
-        'data-domain': 'docs.venster.art',
+        'data-domain': 'dat-docs.wout.codes',
         src: '/js/script.js',
       },
     ],
