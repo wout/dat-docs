@@ -22,12 +22,4 @@ Token viewers with DAT support can gather all necessary information from the blo
 
 ## How to create a DAT?
 
-The easiest way to create a DAT collection is to launch on [venster.art](https://venster.art/) (available in September 2023). Venster handles all the technical details and provides a user-friendly interface to create and manage your DAT collections.
-
-However, if you prefer an independent approach, you can create DATs and mint them on any platform. By adhering to the instructions outlined on the [specification page](/dat-metadata-standard/specification), viewers with support for the standard can render your collection.
-
-## How to view a DAT?
-
-Currently, only [venster.io](https://venster.io/) supports the DMS (DAT Metadata Standard). It's a proof-of-concept that will be replaced by [venster.art](https://venster.art/) in the Autumn of 2023. A free desktop viewer with full-screen mode and token backup functionality is also in development.
-
-Our new viewer component will be made open-source to boost adoption by other platforms and services. Additionally, we are discussing with other blockchain viewers to adopt the standard. Expect more extensive DAT support soon.
+You can create DATs and mint them on any platform. By adhering to the instructions outlined on the [specification page](/dat-metadata-standard/specification), viewers with support for the standard can render your collection.

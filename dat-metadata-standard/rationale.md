@@ -137,10 +137,6 @@ This standard is only interested in storing the part produced by the creator. Ev
 
 To enhance a token's archival qualities, DATs require a list of supported browsers with their versions in which the program is tested and confirmed to work correctly. It will help collectors to reproduce their token collections in the distant future.
 
-::: tip
-Venster's open-source desktop viewers get a major update every year. They come with a full browser embedded. Creators are encouraged to reference in which venster viewer their DAT is tested.
-:::
-
 ### Variant 2: **Non-browser-based**
 
 Generative artists regularly use tools that run outside the confines of web browsers. At least two on-chain generative token collections on Cardano do not use web technologies for rendering and describe the reproduction process in an improvised way.

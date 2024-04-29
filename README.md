@@ -1,6 +1,6 @@
-# venster-docs
+# dat-docs
 
-This repository contains the documentation for the [venster](https://venster.art) platform. It is built using [VitePress](https://vitepress.vuejs.org/).
+This repository contains the documentation for the DAT Medatada Standard. It is built using [VitePress](https://vitepress.vuejs.org/).
 
 ## Development
 
